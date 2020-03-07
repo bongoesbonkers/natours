@@ -1,0 +1,241 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+/* browser reset using the - universal selector */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font-properties should be written in  */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;  /* Line height 1.7 times larger than previously */
+  color: #777;
+  padding: 30px;
+}
+
+.header {
+  height: 95vh;  /* At every point make the
+                header have a height of 95% of the viewport */
+  background-image: linear-gradient(90deg, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon( 0  0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+}
+
+/* LOGO */
+
+.logo-box {
+  position: absolute;
+  top: 6%;
+  left: 3%;
+}
+
+.logo {
+  height: 35px;
+}
+
+.heading-primary {
+  color: white;
+  text-shadow: 0 0 20px white;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  backface-visibility: hidden;
+  /* text-align: center; */
+}
+
+.heading-primary-main{
+  display: block;
+  font-size: 3.2rem /*60px*/;
+  font-weight: 400;
+  letter-spacing: 35px;
+  text-shadow: 0 0 15px white;
+  animation-name: moveInLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  transition: all 2s;
+}
+
+.heading-primary-main:hover {
+  text-shadow: 0 0 20px rgba(68, 68, 68, 0.7);
+}
+
+.heading-primary-sub{
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 17px;
+  margin-right: 1rem;
+  animation-name: fadeInUpwards;
+  animation-duration: 1.3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.8s;
+  animation-fill-mode: backwards;
+  transition: all 1s;
+}
+
+.heading-primary-sub:hover {
+  text-shadow: 0 0 10px #555;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  /* background-color: red; */
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 15px 40px;
+  border-radius: 100px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+
+}
+
+.btn::after {
+  content:'';
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation-name: fadeIn, wiggle;
+  animation-duration: 1.3s, 0.2s;
+  animation-timing-function: ease-in, ease-out;
+  animation-delay: 3s, 4.3s;
+  animation-fill-mode: backwards;
+}
+
+/* Animations */
+
+@keyframes moveInLeft {
+  0%  {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+
+  80% {
+    opacity: 0.8;
+    transform: translateX(2px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUpwards {
+  0%  {
+    opacity: 0;
+    transform: translateY(40px);
+    /* transform: translateX(100px); */
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0%  {
+    opacity: 0;
+    transform: translateY(40px);
+    /* transform: translateX(100px); */
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes wiggle {
+
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(3deg);
+  }
+
+  50% {
+    transform: rotate(-3deg);
+  }
+
+  75% {
+    transform: rotate(1deg);
+
+      }
+  100% {
+    transform: rotate(0);
+  }
+
+}
