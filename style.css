@@ -237,5 +237,32 @@ body {
   100% {
     transform: rotate(0);
   }
+}
+
+@media (max-width: 764px) {
+
+    body {
+      font-size: 13px;
+    }
+
+    .logo {
+      height: 25px;
+    }
+
+    .heading-primary-main {
+      font-size: 1.3rem;
+      font-weight: 400;
+      letter-spacing: 25px;
+    }
+
+    .heading-primary-sub {
+      font-size: 0.65rem;
+      letter-spacing: 8px;
+    }
+
+    .btn:link,
+    .btn:visited {
+      padding: 10px 20px;
+    }
 
 }
