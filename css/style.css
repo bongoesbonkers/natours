@@ -108,6 +108,7 @@ body {
   text-transform: uppercase;
   transition: all 0.2s;
   position: relative;
+  backface-visibility: hidden;
 }
 
 .btn:hover {
