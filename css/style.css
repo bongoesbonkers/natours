@@ -3,7 +3,7 @@
   float: left; }
 
 .about__image-container img {
-  width: 28rem;
+  max-width: 28rem;
   position: absolute;
   background-position: top; }
 
@@ -346,3 +346,19 @@ body {
   top: 70%;
   right: 40%;
   z-index: 1; }
+
+@media (max-width: 900px) {
+  .about-section .heading-secondary {
+    font-size: 2.25rem; }
+  .about__image-container img {
+    display: inline-block;
+    max-width: 21.5rem;
+    height: auto;
+    position: static; }
+    .about__image-container img:not(:last-child) {
+      margin-bottom: 5rem; }
+    .about__image-container img:first-child {
+      margin-top: 1rem; }
+    .about__image-container img:hover {
+      padding: 0.3rem;
+      border-width: 0.3rem; } }
