@@ -57,6 +57,17 @@
   100% {
     transform: rotate(0); } }
 
+@keyframes material_float {
+  0% {
+    transform: scale(100%);
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3); }
+  50% {
+    transform: scale(90%);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.45); }
+  100% {
+    transform: scale(100%);
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3); } }
+
 /* browser reset using the - universal selector */
 * {
   margin: 0;
@@ -89,6 +100,7 @@ body {
   /* text-align: center; */ }
   .heading-primary--main {
     display: block;
+    /*60px*/
     font-size: 5rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
@@ -122,10 +134,10 @@ body {
   background-image: linear-gradient(to right, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.8));
   -webkit-background-clip: text;
   color: transparent;
-  transition: all, .2s; }
+  transition: all, 0.2s; }
   .heading-secondary:hover {
     transform: skew(0, 4deg);
-    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); }
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -140,8 +152,16 @@ body {
     margin-bottom: 2.45rem; }
 
 .features__card-hero-caption {
-  font-size: calc(1.6rem - 10%);
+  font-size: calc(1.6rem - 40%);
+  font-weight: 700;
+  letter-spacing: 0.3px; }
+
+.features__card::after {
+  font-size: calc(1.6rem - 20%);
   font-weight: 700; }
+
+.card-practice {
+  letter-spacing: .7px; }
 
 .u-center-text {
   text-align: center; }
@@ -262,17 +282,6 @@ body {
     cursor: pointer;
     animation: wiggle .3s .65s;
     opacity: 1; }
-  .features__card::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: transparent;
-    outline: 0.2rem solid #7ed56f;
-    outline-offset: -0.7rem; }
   .features__card-hero [class^="icon-basic"]::before {
     font-size: 8rem;
     background-image: linear-gradient(to right, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.8));
@@ -280,7 +289,70 @@ body {
     color: transparent; }
   .features__card-hero-caption {
     margin-top: 2rem;
-    line-height: 1.2; }
+    line-height: 1.2;
+    position: relative; }
+  .features__card .pseudo-class {
+    width: inherit;
+    height: inherit;
+    padding: inherit; }
+    .features__card .pseudo-class::after::after {
+      content: "HELLO";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      position: absolute;
+      top: 0;
+      left: 0; }
+
+.card-practice {
+  display: block;
+  padding-top: 25rem;
+  text-align: center; }
+
+.card__container {
+  margin: 1rem;
+  padding: 1rem 2rem;
+  display: inline-block;
+  min-width: 17.5rem;
+  max-width: 25rem;
+  min-height: 20rem;
+  text-align: center;
+  background-color: #fbfbfb;
+  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.25);
+  position: relative; }
+  .card__container-anim--rotate {
+    transition: all .3s; }
+    .card__container-anim--rotate:active {
+      transform: rotateY(180deg); }
+      .card__container-anim--rotate:active .icon-basic-world::before {
+        display: none; }
+      .card__container-anim--rotate:active .card__hero-text {
+        display: inline-block; }
+  .card__container-anim--materialFloat {
+    animation-name: material_float;
+    animation-timing-function: ease;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    backface-visibility: hidden; }
+    .card__container-anim--materialFloat:hover .card__hero {
+      transform: rotateY(180deg) translate(0, 8.5rem) scale(1.2); }
+
+.card__hero .icon-basic-world::before {
+  font-size: 5rem;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%); }
+
+.card__hero-text {
+  display: none;
+  max-width: 30%;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: rotateY(180deg) translate(-50%, -50%); }
 
 .row {
   max-width: 114rem;
@@ -375,7 +447,7 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
 
 .features-section {
-  margin: -24vh auto;
+  margin: -24vh auto 0;
   padding: 20rem 10rem 10rem;
   background-image: linear-gradient(to right, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
   background-position: top;
