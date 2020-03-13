@@ -407,7 +407,7 @@ body {
       .about__image-container img:hover {
         padding: 0.3rem;
         border-width: 0.3rem;
-        transform: scale(1.15); }
+        transform: scale(1.05); }
   .features-section {
     margin: -28vh auto;
     padding: 25rem 5rem 7rem; }
