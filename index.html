@@ -73,12 +73,12 @@
       <div class="row">
         <div class="col col-1-of-4">
           <div class="features__card">
-            <div class="pseudo-class">
-              <div class="features__card-hero features__card-animate">
-                <i class="icon-basic-world features__card-hero--i1 "></i>
-                <h4 class="features__card-hero-caption">You don't need to travel around the world to experience life.</h4>
-              </div>
+            <!-- <div class="pseudo-class"> -->
+            <div class="features__card-hero features__card-animate">
+              <i class="icon-basic-world features__card-hero--i1 "></i>
+              <h4 class="features__card-hero-caption">You don't need to travel around the world to experience life.</h4>
             </div>
+            <!-- </div> -->
           </div>
         </div>
 
@@ -110,30 +110,74 @@
             </div>
           </div>
         </div>
-
-      </div>
     </section>
 
-    <section class="card-practice">
-      <div class="card__container card__container-anim--materialFloat card__container-anim--rotate">
-        <div class="card__hero">
-          <div class="card__hero-i"><i class="icon-basic-world"></i></div>
-          <div class="card__hero-text">Lorem ipsum dolor sit amet.</div>
-        </div>
-      </div>
+  <section>
+  <!-- Need:
+  1) A card with an icon that rotates to reveal a captio when the user taps on it.
 
-      <div class="card__container card__container-anim--rotate">
-        <div class="card__hero">
-          <div class="card__hero-i"><i class="icon-basic-world"></i></div>
-          <div class="card__hero-text">Lorem ipsum dolor sit amet.</div>
-        </div>
-      </div>
+    Method:
+    1) Use a checkbox :checked pseudo class to trigger the 2 sides of card
+    2) The checkbox should be hidden. Style the label as the card to trigger the checkbox.
+    3) The card flip needs a transition property on its parent element.
 
-    </section>
+  -->
+ <div class="row">
+   <div class="col col-1-of-2">
+     <div class="card">
+       <div class="card-inner">
+         <div class="card__front">
+           <div class="u-placeholder">
+             <div class="card__front-icon icon-basic-compass u-centralise"></div>
+           </div>
+         </div>
+         <div class="card__back">
+           <div class="u-placeholder">
+             <div class="u-centralise">
+               <p class="card__back-caption card__back-caption--l">John Doe</p>
+               <p class="card__back-caption card__back-caption--s u-uppercase">Researcher</p>
+               <p class="card__back-caption card__back-caption--xl">Visitor</p>
+               <p class="card__back-caption card__back-caption--s">Hands Medical Ltd.</p>
+             </div>
+           </div>
+         </div>
+       </div>
+    </div>
+   </div>
+   <div class="col col-1-of-2">
+     <div class="card">
+       <div class="card-inner">
+         <div class="card__front">
+           <div class="u-placeholder">
+             <div class="card__front-icon icon-basic-compass u-centralise"></div>
+           </div>
+         </div>
+         <div class="card__back">
+           <div class="u-placeholder">
+             <div class="u-centralise">
+               <p class="card__back-caption card__back-caption--l">Jane Doe</p>
+               <p class="card__back-caption card__back-caption--s u-uppercase">Researcher's Wife</p>
+               <p class="card__back-caption card__back-caption--xl">Visitor</p>
+               <p class="card__back-caption card__back-caption--s">Hands Medical Ltd.</p>
+             </div>
+           </div>
+         </div>
+       </div>
+    </div>
+   </div>
+
+ </div>
+
+
+
+  </section>
 
   </main>
 
-
+  <!--
+1) Make checkbox have display none...
+2) Give content to your div.
+3)
 
 
   <!-- <section class="grid-test">
