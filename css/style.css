@@ -242,7 +242,7 @@ body {
   border-radius: 2px;
   width: 40%; }
   .book__form-input:focus {
-    border: none;
+    outline: none;
     border-bottom: 4px solid #7ed56f; }
     .book__form-input:focus:invalid {
       border-bottom-color: orangered; }
