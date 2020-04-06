@@ -87,6 +87,17 @@
     transform: scale(100%);
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3); } }
 
+@keyframes materialExpand {
+  0% {
+    width: 8rem;
+    height: 8rem; }
+  66% {
+    width: 8.5rem;
+    height: 8.5rem; }
+  100% {
+    width: 8rem;
+    height: 8rem; } }
+
 /* browser reset using the - universal selector */
 * {
   margin: 0;
@@ -696,9 +707,17 @@ body {
     .navigation input[id="nav-toggler"]:checked ~ .navigation__container {
       visibility: visible;
       opacity: 1; }
+    .navigation input[id="nav-toggler"]:checked + label {
+      background-image: radial-gradient(#55c57a, #28b485, #7ed56f); }
+    .navigation input[id="nav-toggler"]:active + label {
+      animation-name: materialExpand;
+      animation-duration: .5s;
+      animation-delay: 0;
+      animation-timing-function: ease;
+      background-color: white; }
   .navigation label {
     display: block;
-    background-color: white;
+    background-image: radial-gradient(#7ed56f 15%, #28b485 57%, #55c57a);
     box-shadow: 0 1rem 2rem rgba(68, 68, 68, 0.2);
     border-radius: 1000%;
     width: 8rem;
@@ -707,7 +726,12 @@ body {
     top: 6rem;
     right: 7rem;
     z-index: 3000;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all .1s; }
+    .navigation label:hover {
+      transform: scale(1.1);
+      box-shadow: 0 1rem 2rem rgba(68, 68, 68, 0.4);
+      border: 1px solid #7ed56f; }
   .navigation__background {
     width: 7rem;
     height: 7rem;
