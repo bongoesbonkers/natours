@@ -694,7 +694,8 @@ body {
       -ms-transform: scale(60);
       transform: scale(60); }
     .navigation input[id="nav-toggler"]:checked ~ .navigation__container {
-      visibility: visible; }
+      visibility: visible;
+      opacity: 1; }
   .navigation label {
     display: block;
     background-color: white;
@@ -726,6 +727,7 @@ body {
     text-align: center;
     position: fixed;
     z-index: 2000;
+    opacity: 0;
     visibility: hidden;
     transition: all .1s;
     padding: 10rem 0; }
