@@ -711,10 +711,12 @@ body {
       visibility: hidden; }
       .navigation input[id="nav-toggler"]:checked + label .navigation__icon::before {
         visibility: visible;
-        transform: translate(-1.5px, -1rem) rotate(45deg); }
+        -webkit-transform: translate(-1px, -1rem) rotate(45deg);
+        transform: translate(-1px, -1rem) rotate(45deg); }
       .navigation input[id="nav-toggler"]:checked + label .navigation__icon::after {
         visibility: visible;
-        transform: translate(-1.5px, -4.5rem) rotate(-45deg); }
+        -webkit-transform: translate(-1px, -4.5rem) rotate(-45deg);
+        transform: translate(-1px, -4.5rem) rotate(-45deg); }
   .navigation label {
     display: block;
     backface-visibility: hidden;
@@ -734,9 +736,9 @@ body {
       .navigation label:hover > .navigation__icon {
         transition: transform .1s; }
         .navigation label:hover > .navigation__icon::before {
-          transform: translate(-2px, -21px); }
+          -moz-transform: translate(-2px, -21px); }
         .navigation label:hover > .navigation__icon::after {
-          transform: translate(-2px, -35px); }
+          -moz-transform: translate(-2px, -35px); }
   .navigation__background {
     width: 7rem;
     height: 7rem;
@@ -775,6 +777,8 @@ body {
     background-image: linear-gradient(120deg, transparent 50%, white 50%, white 100%);
     background-size: 250%;
     background-position: 0%;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
     transition: all .5s;
     transition-timing-function: ease-in-out; }
   .navigation__link:visited {
@@ -782,6 +786,7 @@ body {
   .navigation__link:hover {
     background-position: 100%;
     color: #55c57a;
+    -webkit-transform: translate(1%, -1%);
     transform: translate(1%, -1%); }
   .navigation__icon {
     display: inline-block;
@@ -790,6 +795,7 @@ body {
     border: 2px solid #777;
     background-color: #777;
     border-radius: 3px;
+    -webkit-transform: translateY(3.8rem);
     transform: translateY(3.8rem);
     transition: all .3s;
     opacity: .8; }
@@ -799,7 +805,8 @@ body {
       width: 100%;
       border: 2px solid #777;
       border-radius: 3px;
-      transform: translate(-6%, -2rem);
+      transform: translate(-6%, -20px);
+      -moz-transform: translate(-6%, -20px);
       background-color: #777; }
     .navigation__icon::after {
       content: "";
@@ -807,7 +814,8 @@ body {
       width: 100%;
       border: 2px solid #777;
       border-radius: 3px;
-      transform: translate(-6%, -3.6rem);
+      transform: translate(-6%, -34px);
+      -moz-transform: translate(-6%, -36px);
       background-color: #777; }
 
 .row {
@@ -966,6 +974,9 @@ body {
 @media (max-width: 900px) {
   body {
     padding: 1.5rem; }
+  .header__logo-box {
+    top: 6%;
+    left: 7%; }
   .about-section .row .col-1-of-2 {
     margin-right: 0; }
     .about-section .row .col-1-of-2 .text-block {
@@ -1150,9 +1161,19 @@ body {
     .footer__copyright {
       text-align: justify; }
   .navigation input[id="nav-toggler"]:checked ~ .navigation__background {
-    -webkit-transform: scale(50);
-    -ms-transform: scale(50);
+    -moz-transform: scale(50);
     transform: scale(50); }
+  .navigation input[id="nav-toggler"]:checked + label .navigation__icon {
+    backface-visibility: hidden;
+    visibility: hidden; }
+    .navigation input[id="nav-toggler"]:checked + label .navigation__icon::before {
+      visibility: visible;
+      transform: translate(-1px, -7px) rotate(45deg);
+      -moz-transform: translate(-2px, -1rem) rotate(45deg); }
+    .navigation input[id="nav-toggler"]:checked + label .navigation__icon::after {
+      visibility: visible;
+      transform: translate(-1px, -36px) rotate(-45deg);
+      -moz-transform: translate(-2px, -4.5rem) rotate(-45deg); }
   .navigation label {
     width: 5.5rem;
     height: 5.5rem;
@@ -1163,10 +1184,10 @@ body {
     cursor: pointer; }
     .navigation label:hover > .navigation__icon::before {
       width: 100%;
-      transform: translate(-2px, -18px); }
+      transform: none; }
     .navigation label:hover > .navigation__icon::after {
       width: 100%;
-      transform: translate(-2px, -30px); }
+      transform: none; }
   .navigation__background {
     width: 5rem;
     height: 5rem;
@@ -1188,8 +1209,10 @@ body {
   .navigation__icon {
     transform: translateY(2.5rem); }
     .navigation__icon::before {
-      width: 95%;
-      transform: translate(-6%, -17px); }
+      width: 100%;
+      transform: translate(-6%, -17px);
+      -moz-transform: translate(-6%, -20px); }
     .navigation__icon::after {
-      width: 95%;
-      transform: translate(-6%, -31px); } }
+      width: 100%;
+      transform: translate(-6%, -27px);
+      -moz-transform: translate(-6%, -36px); } }
