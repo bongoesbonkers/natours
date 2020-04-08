@@ -1174,7 +1174,7 @@ body {
       -moz-transform: translate(-2px, -1rem) rotate(45deg); }
     .navigation input[id="nav-toggler"]:checked + label .navigation__icon::after {
       visibility: visible;
-      transform: translate(-1px, -36px) rotate(-45deg);
+      transform: translate(-1px, -43px) rotate(-45deg);
       -moz-transform: translate(-2px, -4.5rem) rotate(-45deg); }
   .navigation label {
     width: 5.5rem;
@@ -1217,5 +1217,5 @@ body {
       -moz-transform: translate(-2px, -18px); }
     .navigation__icon::after {
       width: 100%;
-      transform: translate(-6%, -27px);
+      transform: translate(-6%, -32px);
       -moz-transform: translate(-2px, -30px); } }
