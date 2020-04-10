@@ -27,11 +27,11 @@
 
     <nav class="navigation__container">
       <ul  class="navigation__list">
-        <li class="navigation__list-item"><a href="" class="navigation__link"><span>01</span>&nbsp Home</a></li>
-        <li class="navigation__list-item"><a href="" class="navigation__link"><span>02</span>&nbsp About Natours</a></li>
-        <li class="navigation__list-item"><a href="" class="navigation__link"><span>03</span>&nbsp Pricing</a></li>
-        <li class="navigation__list-item"><a href="" class="navigation__link"><span>04</span>&nbsp Testimonials</a></li>
-        <li class="navigation__list-item"><a href="" class="navigation__link"><span>05</span>&nbsp Book</a></li>
+        <li class="navigation__list-item"><a href="#header-section" class="navigation__link"><span>01</span>&nbsp Home</a></li>
+        <li class="navigation__list-item"><a href="#about-section" class="navigation__link"><span>02</span>&nbsp About Natours</a></li>
+        <li class="navigation__list-item"><a href="#tours-section" class="navigation__link"><span>03</span>&nbsp Tours</a></li>
+        <li class="navigation__list-item"><a href="#testimonial-section" class="navigation__link"><span>04</span>&nbsp Testimonials</a></li>
+        <li class="navigation__list-item"><a href="#booking-section" class="navigation__link"><span>05</span>&nbsp Book</a></li>
       </ul>
     </nav>
 
@@ -39,7 +39,7 @@
 
 
   <!-- Main -->
-  <header class="header">
+  <header class="header" id="header-section">
     <div class="header__logo-box">
       <img src="img/logo-white.png" alt="logo" class="header__logo">
     </div>
@@ -48,11 +48,11 @@
         <span class="heading-primary--main">Outdoors</span>
         <span class="heading-primary--sub">is where life happens</span>
       </h1>
-      <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
+      <a href="#tours-section" class="btn btn--white btn--animated">Discover our tours</a>
     </div>
   </header>
   <main>
-    <section class="about-section">
+    <section class="about-section" id="about-section">
       <div class="u-center-text u-margin-bottom-40">
         <h2 class="heading-secondary">
           Exciting tours for adventurous people
@@ -121,7 +121,7 @@
           </div>
         </div>
     </section>
-    <section class="tours-section">
+    <section class="tours-section" id="tours-section">
       <div class="u-center-text u-margin-bottom-40">
         <h2 class="heading-secondary">
           Tours to meet every adventurer's desire.
@@ -167,7 +167,7 @@
                     <p class="card__back-only">only</p>
                     <p class="card__back-price">$297</p>
                   </div>
-                  <a href="#" class="card__btn btn btn--white">Book Now</a>
+                  <a href="#popup-section" class="card__btn btn btn--white">Book Now</a>
                 </div>
               </div>
             </div>
@@ -213,7 +213,7 @@
                     <p class="card__back-only">only</p>
                     <p class="card__back-price">$497</p>
                   </div>
-                  <a href="#" class="card__btn btn btn--white">Book Now</a>
+                  <a href="#popup-section" class="card__btn btn btn--white">Book Now</a>
                 </div>
               </div>
             </div>
@@ -258,7 +258,7 @@
                     <p class="card__back-only">only</p>
                     <p class="card__back-price">$897</p>
                   </div>
-                  <a href="#" class="card__btn btn btn--white">Book Now</a>
+                  <a href="#popup-section" class="card__btn btn btn--white">Book Now</a>
                 </div>
               </div>
             </div>
@@ -266,10 +266,10 @@
         </div>
       </div>
       <div class="tours__button">
-        <a href="" class="btn btn--green">See all our tours</a>
+        <a href="" class="btn btn--green">More Tours...</a>
       </div>
     </section>
-    <section class="testimonial-section">
+    <section class="testimonial-section" id="#testimonial-section">
       <div class="bg-vid">
         <video class="bg-vid__content" autoplay muted loop>
           <source src="img/video.mp4" type="video/mp4">
@@ -341,7 +341,7 @@
 
     </section> <!-- Testimonial section -->
 
-    <section class="booking-section">
+    <section class="booking-section" id="booking-section">
       <div class="row">
         <div class="book">
           <form action="#" class="book__form">
@@ -409,6 +409,24 @@
       </div>
     </div>
   </footer>
+
+  <div class="popup" id="popup-section">
+    <div class="popup__content">
+      <div class="popup__left">
+        <img src="img/nat-8.jpg" alt="" class="popup__image">
+        <img src="img/nat-9.jpg" alt="" class="popup__image">
+      </div>
+      <div class="popup__right">
+        <span class="popup_icon">
+          <a href="#tours-section" class="popup__close">X</a>
+        </span>
+        <h2 class="heading-secondary u-margin-bottom-10">Start Booking Now</h2>
+        <h3 class="heading-tertiary u-margin-bottom-20">Important - Please read these terms before booking</h3>
+        <p class="popup__text u-margin-bottom-40">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="#" class="btn btn--green">Book now</a>
+      </div>
+    </div>
+  </div>
 
   <!--
 1) Make checkbox have display none...
